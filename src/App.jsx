@@ -1,3 +1,4 @@
+import Hero from "./components/Hero";
 import Navbar from "./components/Navbar";
 import "./App.css";
 
@@ -14,6 +15,7 @@ function App() {
   return (
     <div className="app">
       <Navbar />
+      <Hero />
       <header className="header">
         <h1>QuickKart Super App</h1>
         <p>Everything Delivered to Your Doorstep</p>
