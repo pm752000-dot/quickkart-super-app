@@ -42,14 +42,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
       div.className="product";
 
-      div.innerHTML=`
+      let qty = 1;
+
+div.innerHTML = `
   <h3>${item.name}</h3>
   <p>${item.price}</p>
 
   <div class="qty-box">
-    <button>-</button>
-    <span>1</span>
-    <button>+</button>
+    <button class="minus">-</button>
+    <span class="qty">${qty}</span>
+    <button class="plus">+</button>
   </div>
 `;
 
