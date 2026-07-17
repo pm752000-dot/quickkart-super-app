@@ -1,3 +1,4 @@
+import Navbar from "./components/Navbar";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
 
   return (
     <div className="app">
+      <Navbar />
       <header className="header">
         <h1>QuickKart Super App</h1>
         <p>Everything Delivered to Your Doorstep</p>
