@@ -1,4 +1,6 @@
+import Categories from "./components/Categories";
 import Hero from "./components/Hero";
+<Categories />
 import Navbar from "./components/Navbar";
 import "./App.css";
 
