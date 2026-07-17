@@ -1,4 +1,5 @@
 alert("JS Working");
+console.log("QuickKart App Loaded");
 document.addEventListener("DOMContentLoaded", function () {
 
   alert("QuickKart JS Loaded");
