@@ -1,1 +1,1 @@
-alert("QuickKart Working");
+alert("QuickKart JS Loaded");
