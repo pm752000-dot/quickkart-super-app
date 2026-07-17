@@ -43,9 +43,15 @@ document.addEventListener("DOMContentLoaded", function () {
       div.className="product";
 
       div.innerHTML=`
-        <h3>${item.name}</h3>
-        <p>${item.price}</p>
-      `;
+  <h3>${item.name}</h3>
+  <p>${item.price}</p>
+
+  <div class="qty-box">
+    <button>-</button>
+    <span>1</span>
+    <button>+</button>
+  </div>
+`;
 
       cartItems.appendChild(div);
 
