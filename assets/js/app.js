@@ -1,15 +1,29 @@
-alert("JS File Loaded");
+document.addEventListener("DOMContentLoaded", function () {
 
-window.onload = function () {
+  const buttons = document.querySelectorAll(".product button");
 
-  const buttons = document.getElementsByTagName("button");
+  buttons.forEach(function(button){
 
-  alert("Buttons Found: " + buttons.length);
+    button.addEventListener("click", function(){
 
-  for (let i = 0; i < buttons.length; i++) {
-    buttons[i].onclick = function () {
-      alert("Button Click Working");
-    };
-  }
+      const product = button.closest(".product");
 
-};
+      const name = product.querySelector("h3").innerText;
+      const price = product.querySelector("p").innerText;
+
+      let cart = JSON.parse(localStorage.getItem("cart")) || [];
+
+      cart.push({
+        name: name,
+        price: price
+      });
+
+      localStorage.setItem("cart", JSON.stringify(cart));
+
+      alert(name + " Added to Cart 🛒");
+
+    });
+
+  });
+
+});
