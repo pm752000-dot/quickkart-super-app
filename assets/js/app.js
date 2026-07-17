@@ -1,19 +1,15 @@
-document.addEventListener("DOMContentLoaded", function () {
+alert("JS File Loaded");
 
-  alert("QuickKart Working");
+window.onload = function () {
 
-  const buttons = document.querySelectorAll(".product button");
+  const buttons = document.getElementsByTagName("button");
 
-  buttons.forEach(function(button) {
-    button.addEventListener("click", function() {
+  alert("Buttons Found: " + buttons.length);
 
-      const product = button.closest(".product");
-      const name = product.querySelector("h3").textContent;
-      const price = product.querySelector("p").textContent;
+  for (let i = 0; i < buttons.length; i++) {
+    buttons[i].onclick = function () {
+      alert("Button Click Working");
+    };
+  }
 
-      alert(name + "\n" + price + "\nAdded to Cart 🛒");
-
-    });
-  });
-
-});
+};
