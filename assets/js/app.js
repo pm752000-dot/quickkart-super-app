@@ -54,7 +54,21 @@ div.innerHTML = `
     <button class="plus">+</button>
   </div>
 `;
+const qtyText = div.querySelector(".qty");
+const plusBtn = div.querySelector(".plus");
+const minusBtn = div.querySelector(".minus");
 
+plusBtn.onclick = function () {
+  qty++;
+  qtyText.innerText = qty;
+};
+
+minusBtn.onclick = function () {
+  if (qty > 1) {
+    qty--;
+    qtyText.innerText = qty;
+  }
+};
       cartItems.appendChild(div);
 
       total += parseInt(item.price.replace(/[^0-9]/g,"")) || 0;
